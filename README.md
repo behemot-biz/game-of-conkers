@@ -1,39 +1,36 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+### To do:
+modify random numbers for conkers
+    strength should be between 4 - 10
+    durability between 30 - 100
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Refine displayConkerStats
+  read in data from html instead on update!
+  move the the current display data to prepareGame funktion as it is an initial data display. during the turns maybe i can read from the dom instead of fiddeling with arrays...?
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
 
-## Codeanywhere Reminders
+### Game play
+ create conker objects with random strength and durability.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+  if enough time add special attribute like stun, string snap etc.
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+assign conkers to players (player and computer)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
+print the conker stats through out the game.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+ game loop
+  keep track of th game turns computer or player's turn to hit.
+Start new game on request when round has ended. Call quitGame on request
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Player and computer takes turns to hit conker untile one conker breakes.
 
-To log into the Heroku toolbelt CLI:
+calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+keep track of total score, first to take 10 wins wins the full game 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Quit game
 
----
-
-Happy coding!
+Display thanks for a food game and welcome back.
