@@ -70,20 +70,30 @@ function playGame() {
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
  */
 function playTurn(attacker, defender) {
-    let damage = attacker.strength;
+    //Add some random strength to the attack
+   
+    let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
+    let damage = hitStrength;
+            console.log("hitStrength: " + hitStrength);
             console.log("attacker strength: " + attacker.strength + " | " + attacker.name);
             console.log("defender durability: " + defender.durability + " | " + defender.name);
             console.log("damage: " + damage);
     defender.durability -= damage;
             console.log("defender durability: " + defender.durability + " | " + defender.name);
-   defender.durability = 0;
+//    defender.durability = 0;
             if (defender.durability <= 0) {
         console.log(defender.name + "'s conker is broken");
         return //
     } 
     return //
 }
+
+
+
 playGame(conkers);
+
+
+
 /**
  * keep track of total score, first to take 10 wins wins the full game 
  */

@@ -4,9 +4,15 @@ modify random numbers for conkers
     strength should be between 4 - 10
     durability between 30 - 100
 
+    Need to add some other element that makes the game more interesting. Just having the strength and durability mekes it quite obvious which conker is going to win... perhaps add random strength to the hit!
+
 Refine displayConkerStats
   read in data from html instead on update!
   move the the current display data to prepareGame funktion as it is an initial data display. during the turns maybe i can read from the dom instead of fiddeling with arrays...?
+    Or create an updateConkerStats to handel the data.
+
+Find suitable concer images
+   Images that can easily be "shrunken" based on the remaining durability from each turn to illustrate the progress of the game.
 
 
 ### Game play
