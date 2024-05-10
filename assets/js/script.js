@@ -40,7 +40,7 @@ function displayConkerStats() {
 }
 
 let conkers = prepareGame();
-displayConkerStats(conkers);
+// displayConkerStats(conkers);
 
 /**
  * game loop
@@ -49,7 +49,7 @@ displayConkerStats(conkers);
  * call quitGame on request
  */
 function playGame() {
-
+    displayConkerStats(conkers);
     // player starts by default
     // player = 0 computer = 1
     let attacker = 0;
@@ -70,18 +70,20 @@ function playGame() {
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
  */
 function playTurn(attacker, defender) {
+    
     //Add some random strength to the attack
-   
     let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
+
     let damage = hitStrength;
             console.log("hitStrength: " + hitStrength);
             console.log("attacker strength: " + attacker.strength + " | " + attacker.name);
             console.log("defender durability: " + defender.durability + " | " + defender.name);
             console.log("damage: " + damage);
+
     defender.durability -= damage;
             console.log("defender durability: " + defender.durability + " | " + defender.name);
-//    defender.durability = 0;
-            if (defender.durability <= 0) {
+
+    if (defender.durability <= 0) {
         console.log(defender.name + "'s conker is broken");
         return //
     } 
@@ -90,7 +92,7 @@ function playTurn(attacker, defender) {
 
 
 
-playGame(conkers);
+// playGame(conkers);
 
 
 
