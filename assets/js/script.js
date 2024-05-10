@@ -3,21 +3,28 @@
  * create conker objects with random strength and durability
  * if enough time add special attribute like stun, string snap etc.
  */
-function createConker() {
-    
+function createConker(name, strength, durability) {
+    return {
+        name: name, 
+        strength: strength,
+        durability: durability
+    };
 }
 
 /**
  * assign conkers to players (player and computer)
  */
-function prepareGame () {
+function prepareGame() {
+    let playerConker = createConker("Player", 10, 100);
+    let computerConker = createConker("Computer", 10, 100);
+    return  playerConker, computerConker;
     
 }
 /**
  * print the conker stats through out the game
  * 
  */
-function displayConkerStats() {
+function displayConkerStats(playerConker) {
     //
 
 }
