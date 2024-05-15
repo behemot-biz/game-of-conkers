@@ -31,6 +31,7 @@ function prepareGame() {
  */
 function startGame() {
     conkers = prepareGame();
+    displayConkerStats(conkers);
 }
 /**
  * Add event listener for players attack button, call play turn
@@ -114,7 +115,7 @@ function playGame() {
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
  */
 function playTurn(attacker, defender) {
-    
+    console.log("conker status: " + conkerBroken);
     //Add some random strength to the attack
     let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
 
@@ -130,10 +131,11 @@ function playTurn(attacker, defender) {
     if (defender.durability <= 0) {
         console.log(defender.name + "'s conker is broken");
         displayConkerStats(attacker, defender);
-        return //
+        conkerBroken = true;
+        return conkerBroken;
     } 
     displayConkerStats(attacker, defender);
-    return //
+    //return //
 }
 
 
