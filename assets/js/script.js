@@ -1,3 +1,9 @@
+/**
+ * Setting up 
+ */
+let conkers;
+let attacker = 0;  // player 0, computer 1
+let conkerBroken = false;
 
 /**
  * create conker objects with random strength and durability
@@ -20,7 +26,33 @@ function prepareGame() {
     return  [playerConker, computerConker];
     
 }
+/**
+ * Start game, add conkers to players
+ */
+function startGame() {
+    conkers = prepareGame();
+}
+/**
+ * Add event listener for players attack button, call play turn
+ * and then hand over to computers turn.
+ */
+document.getElementById("attackButton").addEventListener("click", function() {
+    if (conkerBroken != true && attacker === 0) {
+        playTurn(conkers[0], conkers[1]);
+        console.log("players turn");
+        attacker = 1; // next turn computer
 
+
+}
+});
+
+function computersTurn() {
+    if (conkerBroken != true && attacker === 1){
+        playTurn(conkers[1], conkers[0]);
+        console.log("computers turn");
+        attacker = 0; // next turn player
+    }
+}
 /**
  * print the conker stats through out the game
  * 
@@ -39,7 +71,7 @@ function displayConkerStats() {
     document.getElementById('computerConker').innerHTML = computerStats;
 }
 
-let conkers = prepareGame();
+// let conkers = prepareGame();
 // displayConkerStats(conkers);
 
 /**
@@ -62,7 +94,6 @@ function playGame() {
         attacker = 9; // players turn
     }
 
-    
 }
 
 /**
