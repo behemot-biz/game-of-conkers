@@ -63,17 +63,25 @@ function computersTurn() {
  * 
  */ 
 function displayConkerStats() {
-    let playerStats = conkers[0].name + "<br>";
-    playerStats += "Strength: " + conkers[0].strength + "<br>";
-    playerStats += "Durability: " + conkers[0].durability;
+    document.getElementById("playerConkerStrength").textContent = conkers[0].strength;
+    document.getElementById("playerConkerDurability").textContent = conkers[0].durability;
 
-    let computerStats = conkers[1].name + "<br>";
-    computerStats += "Strength:" + conkers[1].strength + "<br>";
-    computerStats += "Durability: " + conkers[1].durability;
+    document.getElementById("computerConkerStrength").textContent = conkers[1].strength;
+    document.getElementById("computerConkerDurability").textContent = conkers[1].durability;
+
+
+    // let playerStats = conkers[0].name + "<br>";
+    // playerStats += "Strength: " + conkers[0].strength + "<br>";
+    // playerStats += "Durability: " + conkers[0].durability;
+
+    // let computerStats = conkers[1].name + "<br>";
+    // computerStats += "Strength:" + conkers[1].strength + "<br>";
+    // computerStats += "Durability: " + conkers[1].durability;
 
     // let playerStrength = conkers[0].strength;
-    document.getElementById('playerConker').innerHTML = playerStats;
-    document.getElementById('computerConker').innerHTML = computerStats;
+    
+    // document.getElementById('playerConker').innerHTML = playerStats;
+    // document.getElementById('computerConker').innerHTML = computerStats;
 }
 
 // let conkers = prepareGame();
@@ -121,8 +129,10 @@ function playTurn(attacker, defender) {
 
     if (defender.durability <= 0) {
         console.log(defender.name + "'s conker is broken");
+        displayConkerStats(attacker, defender);
         return //
     } 
+    displayConkerStats(attacker, defender);
     return //
 }
 
