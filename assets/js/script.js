@@ -64,49 +64,12 @@ function computersTurn() {
  * 
  */ 
 function displayConkerStats() {
+    
     document.getElementById("playerConkerStrength").textContent = conkers[0].strength;
     document.getElementById("playerConkerDurability").textContent = conkers[0].durability;
 
     document.getElementById("computerConkerStrength").textContent = conkers[1].strength;
     document.getElementById("computerConkerDurability").textContent = conkers[1].durability;
-
-
-    // let playerStats = conkers[0].name + "<br>";
-    // playerStats += "Strength: " + conkers[0].strength + "<br>";
-    // playerStats += "Durability: " + conkers[0].durability;
-
-    // let computerStats = conkers[1].name + "<br>";
-    // computerStats += "Strength:" + conkers[1].strength + "<br>";
-    // computerStats += "Durability: " + conkers[1].durability;
-
-    // let playerStrength = conkers[0].strength;
-    
-    // document.getElementById('playerConker').innerHTML = playerStats;
-    // document.getElementById('computerConker').innerHTML = computerStats;
-}
-
-// let conkers = prepareGame();
-// displayConkerStats(conkers);
-
-/**
- * game loop
- * keep track of th game turns computer or player's turn to hit
- * Start new game on request when round has ended
- * call quitGame on request
- */
-function playGame() {
-    displayConkerStats(conkers);
-    // player starts by default
-    // player = 0 computer = 1
-    let attacker = 0;
-
-    if (attacker === 0) {
-        playTurn(conkers[0], conkers[1]);
-        attacker = 1; // computers turn
-    } else {
-        playTurn(conkers[1], conkers[0]);
-        attacker = 9; // players turn
-    }
 
 }
 
@@ -132,17 +95,11 @@ function playTurn(attacker, defender) {
         console.log(defender.name + "'s conker is broken");
         displayConkerStats(attacker, defender);
         conkerBroken = true;
-        return conkerBroken;
     } 
+
     displayConkerStats(attacker, defender);
-    //return //
+    
 }
-
-
-
-// playGame(conkers);
-
-
 
 /**
  * keep track of total score, first to take 10 wins wins the full game 
