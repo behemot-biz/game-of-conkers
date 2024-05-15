@@ -4,7 +4,9 @@ modify random numbers for conkers
     strength should be between 4 - 10
     durability between 30 - 100
 
-    Need to add some other element that makes the game more interesting. Just having the strength and durability mekes it quite obvious which conker is going to win... perhaps add random strength to the hit!
+ Need to add some other element that makes the game more interesting. Just having the strength and durability mekes it quite obvious which conker is going to win... perhaps add random strength to the hit!
+
+hide attack button on game over
 
 Refine displayConkerStats
   read in data from html instead on update!
@@ -40,3 +42,15 @@ keep track of total score, first to take 10 wins wins the full game
 Quit game
 
 Display thanks for a food game and welcome back.
+
+### difficulties
+I had a bit of struggle with the play game loop as i built it, it was playing out the game in one go. i had to rethink this and split it to use event handler for players turn and create new function for computers turn.
+
+### sources
+How to set time out and then call computers turn.
+https://codedamn.com/news/javascript/what-is-settimeout-in-javascript
+
+maybe show/hide player attack button? ot sure yet.
+ https://stackoverflow.com/questions/71147262/how-can-i-hide-this-button-onclick-with-javascript
+
+

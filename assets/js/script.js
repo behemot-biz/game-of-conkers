@@ -34,25 +34,30 @@ function startGame() {
 }
 /**
  * Add event listener for players attack button, call play turn
- * and then hand over to computers turn.
+ * and then hand over to computers turn after short timeout.
  */
 document.getElementById("attackButton").addEventListener("click", function() {
+    console.log("players turn");
     if (conkerBroken != true && attacker === 0) {
         playTurn(conkers[0], conkers[1]);
-        console.log("players turn");
+
         attacker = 1; // next turn computer
-
-
-}
+        setTimeout(computersTurn, 2000); // wait 2 seconds and then call computers turn.
+    }
 });
 
+/**
+ * Computers turn
+ */
 function computersTurn() {
+    console.log("computers turn");
     if (conkerBroken != true && attacker === 1){
         playTurn(conkers[1], conkers[0]);
-        console.log("computers turn");
+
         attacker = 0; // next turn player
     }
 }
+
 /**
  * print the conker stats through out the game
  * 
