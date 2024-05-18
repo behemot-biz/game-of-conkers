@@ -32,6 +32,8 @@ function prepareGame() {
 function startGame() {
     conkers = prepareGame();
     displayConkerStats(conkers);
+    document.getElementById("startButton").style.display = "none";
+    document.getElementById("attackButton").style.display = "block";
 }
 /**
  * Add event listener for players attack button, call play turn
@@ -95,6 +97,8 @@ function playTurn(attacker, defender) {
         console.log(defender.name + "'s conker is broken");
         displayConkerStats(attacker, defender);
         conkerBroken = true;
+        document.getElementById("startButton").style.display = "block";
+        document.getElementById("attackButton").style.display = "none";
     } 
 
     displayConkerStats(attacker, defender);

@@ -31,6 +31,10 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-evenly;
 }
+.hidden {
+    display: none;
+
+}
 .score-area {
     margin: 0 auto;
     width:280px;
