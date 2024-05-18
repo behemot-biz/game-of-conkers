@@ -11,6 +11,42 @@ h1, h2, h3 {
 
 }
 
+.button {
+    background-color: #ffffff;
+    color: #494949;
+    text-decoration: none;
+    border: #494949 1px solid;
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.button:active {
+    background-color: #494949;
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    
+}
+.score-area {
+    margin: 0 auto;
+    width:280px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.score-area div {
+    padding: 10px;
+}
+.score-area, .score p {
+    text-transform: uppercase;
+    text-align: center;
+}
+.score p {
+    font-size: 0.5rem;
+    font-weight: 200;
+}
+.score  {
+    font-size: 1rem;
+    font-weight: 800;
+}
 .game-area {
     height: 50vh;
     width: 280px;
