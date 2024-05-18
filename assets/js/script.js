@@ -45,6 +45,7 @@ document.getElementById("attackButton").addEventListener("click", function() {
         playTurn(conkers[0], conkers[1]);
 
         attacker = 1; // next turn computer
+        document.getElementById("attackButton").style.backgroundColor = "#f3c7c7";
         setTimeout(computersTurn, 2000); // wait 2 seconds and then call computers turn.
     }
 });
@@ -58,6 +59,7 @@ function computersTurn() {
         playTurn(conkers[1], conkers[0]);
 
         attacker = 0; // next turn player
+        document.getElementById("attackButton").style.backgroundColor = "#ffffff";
     }
 }
 
