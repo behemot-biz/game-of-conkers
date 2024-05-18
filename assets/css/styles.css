@@ -8,7 +8,7 @@ body {
 
 }
 h1, h2, h3 {
-
+    color: #494949;
 }
 
 .button {
@@ -24,7 +24,12 @@ h1, h2, h3 {
     background-color: #494949;
     color: #ffffff;
     border: #ffffff 1px solid;
-    
+}
+.button-area {
+    margin: 0 auto;
+    width:280px;
+    display: flex;
+    justify-content: space-evenly;
 }
 .score-area {
     margin: 0 auto;
