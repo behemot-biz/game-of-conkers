@@ -11,6 +11,11 @@ h1, h2, h3 {
     color: #494949;
 }
 
+img {
+    width: 100px;
+    height: auto;
+}
+
 .button {
     background-color: #ffffff;
     color: #494949;

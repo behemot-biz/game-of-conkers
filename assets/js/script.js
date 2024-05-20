@@ -34,6 +34,10 @@ function startGame() {
     displayConkerStats(conkers);
     document.getElementById("startButton").style.display = "none";
     document.getElementById("attackButton").style.display = "block";
+  
+    document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
+    document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
+
 }
 /**
  * Add event listener for players attack button, call play turn
@@ -102,7 +106,8 @@ function playTurn(attacker, defender) {
         document.getElementById("startButton").style.display = "block";
         document.getElementById("attackButton").style.display = "none";
     } 
-
+    document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
+    document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
     displayConkerStats(attacker, defender);
     
 }
