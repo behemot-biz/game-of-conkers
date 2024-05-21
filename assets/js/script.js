@@ -6,7 +6,7 @@ let attacker;  // player 0, computer 1
 let conkerBroken;
 
 /**
- * create min and max values for conker strength and durability
+ * Create min and max values for conker strength and durability
  */
 function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min +1)) + min;
@@ -20,8 +20,6 @@ function createConker(name, strength, durability) {
         name: name, 
         strength: randomNumbers(7, 10),
         durability: randomNumbers(60, 100)
-        // strength: Math.floor(Math.random()* 10) +1,
-        // durability: Math.floor(Math.random()* 100) +1
     };
 }
 
@@ -119,8 +117,9 @@ function playTurn(attacker, defender) {
         console.log(defender.name + "'s conker is broken");
         defender.durability = 0;
         conkerBroken = true;
+
         displayConkerStats(attacker, defender);
-        
+        playerScore(attacker.name);
         document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
         document.getElementById("startButton").style.display = "block";
@@ -135,8 +134,10 @@ function playTurn(attacker, defender) {
 /**
  * keep track of total score, first to take 10 wins wins the full game 
  */
-function playerScore() {
-    //
+function playerScore(name) {
+    name = name.toLowerCase();
+
+    document.getElementById(name).innerHTML = parseInt(document.getElementById(name).innerHTML) + 1;
 }
 
 /**
