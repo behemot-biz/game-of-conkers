@@ -6,14 +6,22 @@ let attacker;  // player 0, computer 1
 let conkerBroken;
 
 /**
+ * create min and max values for conker strength and durability
+ */
+function randomNumbers(min, max){
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+/**
  * create conker objects with random strength and durability
  * if enough time add special attribute like stun, string snap etc.
  */
 function createConker(name, strength, durability) {
     return {
         name: name, 
-        strength: Math.floor(Math.random()* 10) +1,
-        durability: Math.floor(Math.random()* 100) +1
+        strength: randomNumbers(7, 10),
+        durability: randomNumbers(60, 100)
+        // strength: Math.floor(Math.random()* 10) +1,
+        // durability: Math.floor(Math.random()* 100) +1
     };
 }
 
@@ -28,6 +36,8 @@ function prepareGame() {
 }
 /**
  * Start game, add conkers to players
+ * Hide/show buttons
+ * 
  */
 function startGame() {
     attacker = 0;  // player 0, computer 1
@@ -35,6 +45,7 @@ function startGame() {
     document.getElementById("attackButton").style.backgroundColor = "#ffffff";
     conkers = prepareGame();
     displayConkerStats(conkers);
+
     document.getElementById("startButton").style.display = "none";
     document.getElementById("attackButton").style.display = "block";
   
