@@ -2,8 +2,8 @@
  * Setting up 
  */
 let conkers;
-let attacker = 0;  // player 0, computer 1
-let conkerBroken = false;
+let attacker;  // player 0, computer 1
+let conkerBroken;
 
 /**
  * create conker objects with random strength and durability
@@ -30,6 +30,9 @@ function prepareGame() {
  * Start game, add conkers to players
  */
 function startGame() {
+    attacker = 0;  // player 0, computer 1
+    conkerBroken = false;
+    document.getElementById("attackButton").style.backgroundColor = "#ffffff";
     conkers = prepareGame();
     displayConkerStats(conkers);
     document.getElementById("startButton").style.display = "none";
@@ -101,8 +104,11 @@ function playTurn(attacker, defender) {
 
     if (defender.durability <= 0) {
         console.log(defender.name + "'s conker is broken");
-        displayConkerStats(attacker, defender);
+        defender.durability = 0;
         conkerBroken = true;
+        displayConkerStats(attacker, defender);
+        
+        
         document.getElementById("startButton").style.display = "block";
         document.getElementById("attackButton").style.display = "none";
     } 

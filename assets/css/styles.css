@@ -10,7 +10,9 @@ body {
 h1, h2, h3 {
     color: #494949;
 }
-
+.center {
+    text-align: center;
+}
 img {
     width: 100px;
     height: auto;
@@ -32,8 +34,9 @@ img {
 }
 .button-area {
     margin: 0 auto;
-    width:280px;
+    padding: 20px;
     display: flex;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
 .hidden {
@@ -41,7 +44,7 @@ img {
 
 }
 .score-area {
-    margin: 0 auto;
+    margin: 15px auto;
     width:280px;
     display: flex;
     justify-content: space-evenly;
@@ -62,10 +65,9 @@ img {
     font-weight: 800;
 }
 .game-area {
-    height: 50vh;
+    /* height: 50vh; */
     width: 280px;
-    margin: 10px auto;
-    background-color: #ece1f6;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -74,10 +76,12 @@ img {
 
 .player-area {
     border: 1px solid #ff0000;
+    text-align: center;
 }
 
 .computer-area {
     border: 1px solid #00ff5e;
+    text-align: center;
 }
 
 @media screen and (min-width: 576px) {
