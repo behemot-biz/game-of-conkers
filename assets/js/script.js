@@ -38,6 +38,8 @@ function startGame() {
     document.getElementById("startButton").style.display = "none";
     document.getElementById("attackButton").style.display = "block";
   
+    document.getElementById("winner").innerHTML = "";
+
     document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
     document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
 
@@ -108,6 +110,7 @@ function playTurn(attacker, defender) {
         conkerBroken = true;
         displayConkerStats(attacker, defender);
         
+        document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
         document.getElementById("startButton").style.display = "block";
         document.getElementById("attackButton").style.display = "none";

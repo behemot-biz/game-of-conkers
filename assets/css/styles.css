@@ -9,9 +9,11 @@ body {
 }
 h1, h2, h3 {
     color: #494949;
+    padding: 15px 0 15px 0;
 }
 .center {
     text-align: center;
+    
 }
 img {
     width: 100px;
@@ -37,7 +39,10 @@ img {
     padding: 20px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-evenly;
+    
+    justify-content: flex-start;
+    flex-direction: column;
+    
 }
 .hidden {
     display: none;
@@ -63,6 +68,7 @@ img {
 .score  {
     font-size: 1rem;
     font-weight: 800;
+    width: 60px;
 }
 .game-area {
     /* height: 50vh; */
@@ -70,18 +76,24 @@ img {
     margin: 0px auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-items: center;*/
+} 
+.player-area, .computer-area  {
+    width: 200px;
+    height:200px;
+    text-align: center;
 }
-
 .player-area {
     border: 1px solid #ff0000;
-    text-align: center;
 }
 
 .computer-area {
     border: 1px solid #00ff5e;
-    text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -91,4 +103,5 @@ img {
         justify-content: space-evenly;
         align-items: stretch;
     }
+   
 }

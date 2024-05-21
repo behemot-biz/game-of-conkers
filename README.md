@@ -54,3 +54,7 @@ maybe show/hide player attack button? ot sure yet.
  https://stackoverflow.com/questions/71147262/how-can-i-hide-this-button-onclick-with-javascript
 
 
+### bug fix
+attack button acts up.
+when computers looses attack button stays red when game starts,
+set attack color button to white in start game
