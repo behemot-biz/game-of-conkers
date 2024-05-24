@@ -45,6 +45,10 @@ function buttonVisibilityStates(elementId, hide) {
 
 }
 
+function conkerResize(elementId, conkerSize) {
+    document.getElementById(elementId).style.width = conkerSize;
+}
+
 /**
  * Start game, add conkers to players
  * Hide/show buttons
@@ -60,24 +64,22 @@ function startGame() {
     buttonVisibilityStates("startButton", true);
     buttonVisibilityStates("attackButton", false);
 
-    // document.getElementById("startButton").style.display = "none";
-    // document.getElementById("attackButton").style.display = "block";
-  
     document.getElementById("winner").innerHTML = "";
 
-    document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
-    document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
+    conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
+    conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
+    
 }
 
 /**
- * Add event listener for players attack button, call play turn
- * and then hand over to computers turn after short timeout.
+ * Players turn, call play turn
+ * Change status on attack button
+ * Hand over to computers turn after short timeout.
  */
-
-
 function playerTurn() {
 
     if (conkerBroken != true && attacker === 0) {
+        
         playTurn(conkers[0], conkers[1]);
 
         attacker = 1; // next turn computer
@@ -87,6 +89,7 @@ function playerTurn() {
 }
 
 function initializeTurn() {
+   
     document.getElementById("attackButton").addEventListener("click", playerTurn);
 }
 
@@ -125,6 +128,7 @@ function displayConkerStats() {
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
  */
 function playTurn(attacker, defender) {
+    
     //Add some random strength to the attack
     let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
     let damage = hitStrength;
@@ -147,8 +151,10 @@ function playTurn(attacker, defender) {
         // document.getElementById("attackButton").style.display = "none";
     } 
 
-    document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
-    document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
+    conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
+    conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
+    // document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
+    // document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
     displayConkerStats(attacker, defender);
 
 }
