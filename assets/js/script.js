@@ -1,5 +1,5 @@
 /**
- * Setting up 
+ * Setting up basic variables
  */
 let conkers = null;
 let attacker = null;  // player 0, computer 1
@@ -11,6 +11,7 @@ let conkerBroken = null;
 function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min +1)) + min;
 }
+
 /**
  * Create conker objects with random strength and durability
  * if enough time add special attribute like stun, string snap etc.
@@ -29,10 +30,12 @@ function createConker(name, strength, durability) {
 function prepareGame() {
     let playerConker = createConker("Player");
     let computerConker = createConker("Computer");
-    return  [playerConker, computerConker];
-    
+    return  [playerConker, computerConker]; 
 }
 
+/**
+ * Show or hide elements through the game  
+ */
 function buttonVisibilityStates(elementId, hide) {
     console.log(elementId);
 
@@ -42,16 +45,21 @@ function buttonVisibilityStates(elementId, hide) {
     } else {
         document.getElementById(elementId).classList.remove("hide");
     }
-
 }
 
+/**
+ * Update conkers size during the game
+ * from setup to conker broken
+ * @param {*} elementId 
+ * @param {*} conkerSize 
+ */
 function conkerResize(elementId, conkerSize) {
     document.getElementById(elementId).style.width = conkerSize;
 }
 
 /**
  * Start game, add conkers to players
- * Hide/show buttons
+ * Set visibility on elements
  */
 function startGame() {
     attacker = 0;  // player 0, computer 1
@@ -88,16 +96,24 @@ function playerTurn() {
     }
 }
 
+/**
+ * Initialize turn
+ */
 function initializeTurn() {
-   
+
     document.getElementById("attackButton").addEventListener("click", playerTurn);
 }
 
+/**
+ * Add event listener 
+ */
 addEventListener("DOMContentLoaded", initializeTurn);
 
 
 /**
  * Computers turn
+ * Change status on attack button
+ * Hand over to players turn 
  */
 function computerTurn() {
     
@@ -124,12 +140,14 @@ function displayConkerStats() {
 }
 
 /**
- * Player and computer takes turns to hit conker untile one conker breakes
+ * Player and computer takes turns to hit conker until one conker breakes.
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
+ * Resize the conkers after each turn to show durability lost.
+ * When conker breaks show game info elements and hide attack button.
  */
 function playTurn(attacker, defender) {
 
-    //Add some random strength to the attack
+    //Add some random extra strength to the attack
     let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
     let damage = hitStrength;
 
