@@ -15,7 +15,9 @@ main, header {
 }
 header {
     padding: 10px;
-
+}
+main {
+    padding: 10px 0;
 }
 h1, h2, h3 {
     color: #494949;
@@ -63,7 +65,7 @@ img {
 
 }
 .score-area {
-    margin: 15px auto;
+    margin: 0 auto;
     width:280px;
     display: flex;
     justify-content: space-evenly;
@@ -95,10 +97,14 @@ img {
     flex-wrap: nowrap;
 
 } 
+.game-area h3 {
+    padding: 0;
+}
 .player-area, .computer-area  {
     width: 200px;
     height:200px;
     text-align: center;
+    padding-top: 5px;
 }
 /* .player-area {
     border: 1px solid #ff0000;
