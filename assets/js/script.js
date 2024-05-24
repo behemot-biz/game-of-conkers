@@ -128,7 +128,7 @@ function displayConkerStats() {
  * calculate damage hit (strength)/durabillity until one player conker breaks i.e. durability = 0 
  */
 function playTurn(attacker, defender) {
-    
+
     //Add some random strength to the attack
     let hitStrength = Math.floor(Math.random() * attacker.strength) + attacker.strength;
     let damage = hitStrength;
@@ -141,20 +141,17 @@ function playTurn(attacker, defender) {
 
         displayConkerStats(attacker, defender);
         playerScore(attacker.name);
+        
         document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
         buttonVisibilityStates("gameInfo", false);
         buttonVisibilityStates("startButton", false);
         buttonVisibilityStates("attackButton", true);
-
-        // document.getElementById("startButton").style.display = "block";
-        // document.getElementById("attackButton").style.display = "none";
     } 
 
     conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
     conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
-    // document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
-    // document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
+    
     displayConkerStats(attacker, defender);
 
 }
