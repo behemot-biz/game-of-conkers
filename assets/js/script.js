@@ -1,9 +1,9 @@
 /**
  * Setting up 
  */
-let conkers;
-let attacker;  // player 0, computer 1
-let conkerBroken;
+let conkers = null;
+let attacker = null;  // player 0, computer 1
+let conkerBroken = null;
 
 /**
  * Create min and max values for conker strength and durability
@@ -67,27 +67,36 @@ function startGame() {
 
     document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
     document.getElementById("computerConkerImg").style.width =  conkers[1].durability * 2 + "px";
-
 }
+
 /**
  * Add event listener for players attack button, call play turn
  * and then hand over to computers turn after short timeout.
  */
-document.getElementById("attackButton").addEventListener("click", function() {
-    
+
+
+function playerTurn() {
+
     if (conkerBroken != true && attacker === 0) {
         playTurn(conkers[0], conkers[1]);
 
         attacker = 1; // next turn computer
         document.getElementById("attackButton").style.backgroundColor = "#f3c7c7";
-        setTimeout(computersTurn, 1000); // wait 1 seconds and then call computers turn.
+        setTimeout(computerTurn, 1000); // wait 1 seconds and then call computers turn.
     }
-});
+}
+
+function initializeTurn() {
+    document.getElementById("attackButton").addEventListener("click", playerTurn);
+}
+
+addEventListener("DOMContentLoaded", initializeTurn);
+
 
 /**
  * Computers turn
  */
-function computersTurn() {
+function computerTurn() {
     
     if (conkerBroken != true && attacker === 1){
         playTurn(conkers[1], conkers[0]);
