@@ -98,6 +98,21 @@ img {
 .score span {
     color: #005c93;
 }
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.game-info {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    border: 1px solid #005c93;
+    background-color: #ffffffd1;
+    text-align: center;
+    padding: 30px;
+}
 .game-area {
     /* height: 50vh; */
     width: 280px;
@@ -136,6 +151,12 @@ img {
     }
     main {
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-info {
+        width: 80%;
     }
     .game-area {
         width: 80%;

@@ -32,6 +32,19 @@ function prepareGame() {
     return  [playerConker, computerConker];
     
 }
+
+function buttonVisibilityStates(elementId, hide) {
+    console.log(elementId);
+
+    if (hide) {
+        document.getElementById(elementId).classList.remove("show");
+        document.getElementById(elementId).classList.add("hide");
+    } else {
+        document.getElementById(elementId).classList.remove("hide");
+    }
+
+}
+
 /**
  * Start game, add conkers to players
  * Hide/show buttons
@@ -43,8 +56,12 @@ function startGame() {
     conkers = prepareGame();
     displayConkerStats(conkers);
 
-    document.getElementById("startButton").style.display = "none";
-    document.getElementById("attackButton").style.display = "block";
+    buttonVisibilityStates("gameInfo", true);
+    buttonVisibilityStates("startButton", true);
+    buttonVisibilityStates("attackButton", false);
+
+    // document.getElementById("startButton").style.display = "none";
+    // document.getElementById("attackButton").style.display = "block";
   
     document.getElementById("winner").innerHTML = "";
 
@@ -113,8 +130,12 @@ function playTurn(attacker, defender) {
         playerScore(attacker.name);
         document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
-        document.getElementById("startButton").style.display = "block";
-        document.getElementById("attackButton").style.display = "none";
+        buttonVisibilityStates("gameInfo", false);
+        buttonVisibilityStates("startButton", false);
+        buttonVisibilityStates("attackButton", true);
+
+        // document.getElementById("startButton").style.display = "block";
+        // document.getElementById("attackButton").style.display = "none";
     } 
 
     document.getElementById("playerConkerImg").style.width =  conkers[0].durability * 2 + "px";
