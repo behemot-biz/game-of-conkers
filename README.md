@@ -4,7 +4,7 @@ modify random numbers for conkers
     strength should be between 4 - 10
     durability between 30 - 100
 
- Need to add some other element that makes the game more interesting. Just having the strength and durability mekes it quite obvious which conker is going to win... perhaps add random strength to the hit!
+ Need to add some other element that makes the game more interesting. Just having the strength and durability makes it quite obvious which conker is going to win... perhaps add random strength to the hit!
 
 hide attack button on game over
 
@@ -15,6 +15,8 @@ Refine displayConkerStats
 
 Find suitable concer images
    Images that can easily be "shrunken" based on the remaining durability from each turn to illustrate the progress of the game.
+
+Need to quit current game (reset main scores). Add alert that informs game scores will be cleared
 
 
 ### Game play
@@ -41,7 +43,7 @@ keep track of total score, first to take 10 wins wins the full game
 
 Quit game
 
-Display thanks for a food game and welcome back.
+Display thanks for a good game and welcome back.
 
 ### difficulties
 I had a bit of struggle with the play game loop as i built it, it was playing out the game in one go. i had to rethink this and split it to use event handler for players turn and create new function for computers turn.
@@ -53,8 +55,18 @@ https://codedamn.com/news/javascript/what-is-settimeout-in-javascript
 maybe show/hide player attack button? ot sure yet.
  https://stackoverflow.com/questions/71147262/how-can-i-hide-this-button-onclick-with-javascript
 
+How to transform string to lowercase letters.
+- needed to transforme name of player/computer to update score (id lowercase name contains uppercase letter) 
+
+https://www.w3schools.com/jsref/jsref_tolowercase.asp
+
+header (logo/nav) taken from love running/bokashi
 
 ### bug fix
 attack button acts up.
 when computers looses attack button stays red when game starts,
 set attack color button to white in start game
+
+specificity hide show gameInfo. 
+  I had to move .hide and .show down in css due specificity the layer was still visible due to rearanging classes in css (moved game-info down to game-area).
+

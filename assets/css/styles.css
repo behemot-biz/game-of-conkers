@@ -5,12 +5,26 @@
 }
 body {
     font-family: sans-serif;
+    background-color: #e0e0e0;
+
+}
+main, header {
+    width: 280px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+header {
+    padding: 10px;
 
 }
 h1, h2, h3 {
     color: #494949;
     padding: 15px 0 15px 0;
 }
+.logo-heading {
+    font-weight: 700;
+}
+
 .center {
     text-align: center;
     
@@ -95,6 +109,16 @@ img {
 } */
 
 @media screen and (min-width: 576px) {
+    main, header {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    main {
+        height: 100vh;
+    }
     .game-area {
         width: 80%;
         flex-direction: row;
