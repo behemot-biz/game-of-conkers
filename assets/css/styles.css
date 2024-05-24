@@ -65,14 +65,13 @@ img {
 
 }
 .score-area {
-    margin: 0 auto;
-    width:280px;
+    margin: 10px auto 20px auto;
+    width:250px;
     display: flex;
     justify-content: space-evenly;
+    border: 1px solid #000014;
 }
-.score-area div {
-    padding: 10px;
-}
+
 .score-area, .score p {
     text-transform: uppercase;
     text-align: center;
@@ -81,10 +80,23 @@ img {
     font-size: 0.5rem;
     font-weight: 200;
 }
+.score-core {
+    background-color: #005c93;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1rem;
+    border-left: 1px solid #000000;
+    padding: 15px 30px;
+    border-right: 1px solid #000000;
+}
 .score  {
     font-size: 1rem;
     font-weight: 800;
     width: 60px;
+    padding-top: 10px;
+}
+.score span {
+    color: #005c93;
 }
 .game-area {
     /* height: 50vh; */
