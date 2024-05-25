@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game of conkers, Play conkers against computer, Conkers, History of conkers game, Best of 10 wins.">
+    <meta name="keywords" content="Conkers, play conkers, play conkers against computer, best of 10 wins">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Game of Conkers</title>
 </head>
@@ -20,22 +22,22 @@
         </div>
         <div id="gameInfo" class="game-info">
             <div id="winner"></div>
-            <button id="startButton" onclick="startGame()" class="button">Start Game</button>
+            <button id="startButton" onclick="startGame()" class="button" aria-label="Start new game of conkers">Start Game</button>
         </div>
         <div class="game-area">
             <div class="center"><h3>Player</h3>
                 <span id="playerConker"></span>
-                <div class="player-area"><img  id="playerConkerImg" src="assets/images/conker.webp"></div>
+                <div class="player-area"><img  id="playerConkerImg" src="assets/images/conker.webp" alt="Image of players conker hanging on a string"></div>
             </div>
             <div class="button-area center">
               
-                <button id="attackButton" class="button hide">Attack</button>
+                <button id="attackButton" class="button hide" aria-label="Attack computers conker">Attack</button>
             </div>
             <div class="center">
                 <h3>Computer</h3>
                 <span id="computerConker"></span>
                
-                <div class="computer-area"><img  id="computerConkerImg" src="assets/images/conker.webp"></div>
+                <div class="computer-area"><img  id="computerConkerImg" src="assets/images/conker.webp" alt="Image of computers conker hanging on a string"></div>
             </div>
         </div>
     </main>
