@@ -148,6 +148,7 @@ function playTurn(attacker, defender) {
         document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
         buttonVisibilityStates("gameInfo", false);
+        buttonVisibilityStates("startGameInfo", true);
         buttonVisibilityStates("startButton", false);
         buttonVisibilityStates("attackButton", true);
     } 

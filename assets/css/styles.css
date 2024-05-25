@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body {
+    /* font-family: "Source Sans 3", sans-serif; */
     font-family: sans-serif;
+    font-style: normal;
     background-color: #e0e0e0;
 
 }
@@ -20,11 +22,16 @@ main {
     padding: 10px 0;
 }
 h1, h2, h3 {
-    color: #494949;
+    font-family: "Karma", serif;
+    font-style: normal;
+    color: #2B5C8F;
     padding: 15px 0 15px 0;
 }
-.logo-heading {
-    font-weight: 700;
+.logo, .logo-heading {
+    color: #2B5C8F;
+    font-family: "Karma", serif;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .center {
@@ -78,7 +85,7 @@ img {
 }
 .score p {
     font-size: 0.5rem;
-    font-weight: 200;
+    font-weight: 500;
 }
 .score-core {
     background-color: #005c93;
@@ -107,10 +114,10 @@ img {
 .game-info {
     position: absolute;
     width: 100%;
-    height: 80%;
+    /* height: 80%; */
     border: 1px solid #005c93;
     background-color: #ffffffd1;
-    text-align: center;
+    /* text-align: center; */
     padding: 30px;
 }
 .game-area {

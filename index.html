@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Googelfonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <meta name="description" content="Game of conkers, Play conkers against computer, Conkers, History of conkers game, Best of 10 wins.">
     <meta name="keywords" content="Conkers, play conkers, play conkers against computer, best of 10 wins">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -10,9 +14,9 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <a href="index.html"></a>
         <div class="logo-heading" id="logo">Play Conker's</div>
-    </a>
+    
     </header>
     <main>
         <div class="score-area">
@@ -22,7 +26,21 @@
         </div>
         <div id="gameInfo" class="game-info">
             <div id="winner"></div>
-            <button id="startButton" onclick="startGame()" class="button" aria-label="Start new game of conkers">Start Game</button>
+            <center>
+            <button id="startButton" onclick="startGame()" class="button" aria-label="Start new game of conkers" autofocus>Start Game</button>
+            </center>
+            <div id="startGameInfo" class="show">
+                <h1>Welcome to Conker Champions!</h1>
+                <p>Dive into the traditional playground duel of conkers! In this digital twist on a classic game, you face off against the computer in a battle of both luck and strategy. Select your conker, armed with unique strength and durability, and prepare for a clash that will test your nerve and skill.</p>
+                How It Works:
+                   <ul>
+                    <li>Each player takes a turn to swing their conker at their opponent’s.</li>
+                    <li>The impact reduces the opponent's conker durability based on your conker's strength.</li>
+                    <li>The game continues in turns until one conker breaks.</li>
+                    <li>Break your opponent's conker before yours falls apart to claim the title of Conker Champion!</li>
+                   </ul> 
+                   <p>Are you ready to swing? Let the battle begin!</p>
+            </div>
         </div>
         <div class="game-area">
             <div class="center"><h3>Player</h3>
@@ -31,7 +49,7 @@
             </div>
             <div class="button-area center">
               
-                <button id="attackButton" class="button hide" aria-label="Attack computers conker">Attack</button>
+                <button id="attackButton" class="button hide" aria-label="Attack computers conker" autofocus>Attack</button>
             </div>
             <div class="center">
                 <h3>Computer</h3>
