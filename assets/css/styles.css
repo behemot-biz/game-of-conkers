@@ -16,6 +16,19 @@ main, header {
 }
 header {
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.nav a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: #2B5C8F;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+    
 }
 main {
     padding: 10px 0;
@@ -113,27 +126,48 @@ img {
 .hide {
     display: none;
 }
-.game-info {
+.hide-about {
+    text-align: right;
+    margin: -25px -20px 0px 0;
+    padding-bottom: 20px;
+}
+.game-info , .about-info {
     position: absolute;
     /* width: 100%;
     height: 80%; */
     margin: 0 5vw 5vw;
     width: 90vw;
-    height: 77vh;
+    /* height: 77vh; */
     border: 1px solid #005c93;
     background-color: #ffffffe8;
     text-align: center;
     padding: 30px;
     overflow: scroll;
 }
+.about-info {
+    z-index: 90;
+    height: 77vh;
+    background-color: #ffffff;
+    text-align: left;
+}
+.about-info h1, h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    /* line-height: 1.9rem; */
+}
+.game-info {
+    z-index: 80;
+    height: 40vh;
+}
 .game-info h1, h3 {
     text-align: center;
     font-size: 1.5rem;
 }
-.game-info p, ul {
+
+/* .game-info p, ul {
     text-align: left;
     padding-bottom: 5px;
-}
+} */
 .game-area {
     /* height: 50vh; */
     /* width: 280px; */
@@ -177,12 +211,16 @@ img {
         flex-direction: column;
         align-items: center;
     }
-    .game-info {
+    .game-info, .about-info {
         margin-top: 70px;
         max-width: 520px;
         max-height: 500px;
         /* width: 75%; */
         
+    }
+    .game-info, .about-info  h1, h3 {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
     }
     .game-area {
         /* width:80%; */

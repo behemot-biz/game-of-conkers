@@ -158,6 +158,20 @@ function playTurn(attacker, defender) {
 }
 
 /**
+ * Show the about element, holding the how to plah text.
+ */
+function showAbout() {
+    buttonVisibilityStates("about", false)
+}
+
+/**
+ * Hide the about element, holding the how to plah text.
+ */
+function hideAbout() {
+    buttonVisibilityStates("about", true)
+}
+
+/**
  * Keep track of total score, first to take 10 wins wins the full game 
  */
 function playerScore(name) {

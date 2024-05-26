@@ -14,8 +14,10 @@
 </head>
 <body>
     <header>
-        <a href="index.html"></a>
         <div class="logo-heading" id="logo">Play Conkers</div>
+        <div class="nav">
+            <a href="#" onclick="showAbout()" aria-label="Read more about this game and the history of playing conkers">How to play</a>
+        </div>
     
     </header>
     <main>
@@ -24,6 +26,21 @@
             <div class="score-core"><p>Score</p></div>
             <div class="score"><p>Computer</p><span id="computer">0</span></div>
         </div>
+
+        <div id="about" class="about-info hide">
+            <div class="hide-about"><a href="#" onclick="hideAbout()" aria-label="Close this about box">X Close</a></div>
+            <h1>Welcome to Conker Champions!</h1>
+            <p>Dive into the traditional playground duel of conkers! In this digital twist on a classic game, you face off against the computer in a battle of both luck and strategy. Select your conker, armed with unique strength and durability, and prepare for a clash that will test your nerve and skill.</p>
+            <p><strong>How It Works:</strong></p>
+               <ul>
+                <li>Each player takes a turn to swing their conker at their opponent’s.</li>
+                <li>The impact reduces the opponent's conker durability based on your conker's strength.</li>
+                <li>The game continues in turns until one conker breaks.</li>
+                <li>Break your opponent's conker before yours falls apart to claim the title of Conker Champion!</li>
+               </ul> 
+               <p>Are you ready to swing? Let the battle begin!</p>
+        </div>
+
         <div id="gameInfo" class="game-info">
             <div id="winner"></div>
             

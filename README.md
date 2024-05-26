@@ -62,6 +62,8 @@ https://www.w3schools.com/jsref/jsref_tolowercase.asp
 
 header (logo/nav) taken from love running/bokashi
 
+Correct use of event listener and show/hide elements
+Help from Mentor Rohit --> paste in the code from mentor
 ### bug fix
 attack button acts up.
 when computers looses attack button stays red when game starts,
