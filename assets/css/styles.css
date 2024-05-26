@@ -6,16 +6,16 @@
 body {
     font-family: "Source Sans 3", sans-serif;
     font-style: normal;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
 
 }
 main, header {
     /* width: 280px; */
     margin: 0 auto;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 header {
-    padding: 10px;
+    padding: 10px 10px 0 10px;;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -31,7 +31,7 @@ header {
     
 }
 main {
-    padding: 10px 0;
+    /* padding: 10px 0; */
     height: 100vh;
     /* height: 100%; */
 }
@@ -86,7 +86,7 @@ img {
 
 } */
 .score-area {
-    margin: 10px auto 20px auto;
+    margin: 0 auto 20px auto;
     width:250px;
     display: flex;
     justify-content: space-evenly;
@@ -142,11 +142,12 @@ img {
     background-color: #ffffffe8;
     text-align: center;
     padding: 30px;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 .about-info {
     z-index: 90;
-    height: 77vh;
+    /* height: 77vh; */
+
     background-color: #ffffff;
     text-align: left;
 }
@@ -202,7 +203,7 @@ img {
         max-width: 800px;
         margin: 0 auto;
         background-color: #ffffff;
-        padding: 20px;
+        padding: 20px 20px 0;
     }
     main {
         /* height: 100%; */
@@ -224,6 +225,7 @@ img {
     }
     .game-area {
         /* width:80%; */
+        margin-top:40px;
         max-width: 800px;
         flex-direction: row;
         justify-content: space-evenly;
