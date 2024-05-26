@@ -148,9 +148,10 @@ function playTurn(attacker, defender) {
         document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
         
         buttonVisibilityStates("gameInfo", false);
-        buttonVisibilityStates("startGameInfo", true);
-        buttonVisibilityStates("startButton", false);
+        // buttonVisibilityStates("startGameInfo", true);
+        buttonVisibilityStates("newRoundButton", false);
         buttonVisibilityStates("attackButton", true);
+        buttonVisibilityStates("quitButton", false);
     } 
 
     conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");

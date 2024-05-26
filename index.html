@@ -41,23 +41,12 @@
                <p>Are you ready to swing? Let the battle begin!</p>
         </div>
 
-        <div id="gameInfo" class="game-info">
+        <div id="gameInfo" class="game-info hide">
             <div id="winner"></div>
             
-            <button id="startButton" onclick="startGame()" class="button" aria-label="Start new game of conkers">Start Game</button>
+            <button id="newRoundButton" onclick="startGame()" class="button hide" aria-label="Play new round of conkers">Play again</button>
+            <button id="quitButton" onclick="quitGame()" class="button hide" aria-label="Quit the game">Quit game</button>
             
-            <div id="startGameInfo" class="show">
-                <h1>Welcome to Conker Champions!</h1>
-                <p>Dive into the traditional playground duel of conkers! In this digital twist on a classic game, you face off against the computer in a battle of both luck and strategy. Select your conker, armed with unique strength and durability, and prepare for a clash that will test your nerve and skill.</p>
-                <p><strong>How It Works:</strong></p>
-                   <ul>
-                    <li>Each player takes a turn to swing their conker at their opponent’s.</li>
-                    <li>The impact reduces the opponent's conker durability based on your conker's strength.</li>
-                    <li>The game continues in turns until one conker breaks.</li>
-                    <li>Break your opponent's conker before yours falls apart to claim the title of Conker Champion!</li>
-                   </ul> 
-                   <p>Are you ready to swing? Let the battle begin!</p>
-            </div>
         </div>
         <div class="game-area">
             <div class="center"><h3>Player</h3>
@@ -65,7 +54,7 @@
                 <div class="player-area"><img  id="playerConkerImg" src="assets/images/conker.webp" alt="Image of players conker hanging on a string"></div>
             </div>
             <div class="button-area center">
-              
+                <button id="startButton" onclick="startGame()" class="button show" aria-label="Start new game of conkers">Start Game</button>
                 <button id="attackButton" class="button hide" aria-label="Attack computers conker" autofocus>Attack</button>
             </div>
             <div class="center">
