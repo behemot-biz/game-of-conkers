@@ -201,6 +201,9 @@ function checkWinScore(name) {
 /**
  * Quit game
  */
-function gameQuit() {
-    //Display thanks for a food game and welcome back.
+function quitGame() {
+    document.getElementById("winner").innerHTML = `<h3>Thanks for playing! Come back soon!</h3>`;
+    buttonVisibilityStates("attackButton", true);
+    buttonVisibilityStates("newRoundButton", true);
+    buttonVisibilityStates("quitButton", true);
 }
