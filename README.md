@@ -24,23 +24,68 @@ The Game of Conkers is designed to provide an engaging and fun experience for us
 ### Fonts
 I selected the Google Fonts "Karma" for headings and "Source Sans 3" for body text to create a visually appealing contrast.
 
-### Colours
+###  --> left to do --> Colours
 I used a clean and simple color scheme to keep the focus on the game:
 - Background: White
 - Buttons: Neutral colors with slight shades for active/inactive states
+
+![Color scheme](readme-images/colors.png)
+
+####   --> left to do --> Colour use
+- Brown #582f0e - Headlines on white background, logo, hamburger icon and footer 
+- Green #072B07 - Headlines on pale green background
+- Pale green #f6f9f4 - Background color
+- White #ffffff - Background color, icons in footer
+- White whith opacity #fffffff2 - Background color
+- Dark grey #3a3a3a - Bread text and navigation text
+
+###   --> left to do --> Imagery
+I used my own pictures from my garden and family. I also took new pictures of the bokashi workflow to use as illustrations in the guide.
+
+###   --> left to do --> Wireframes
+
+I chose to use figma for wireframe and prototyping. This is also where I wrote most of the textual content to make sure it all works together with the layout.
+As you can see in the image below some design elements has changed, but most is staying true in the deployed version.
+<details>
+<summary>View the Prototype document (image of)</summary>
+
+![Prototype](readme-images/figma-prototype.png)
+</details>
+
 
 ## Features
 
 ### Header and Navigation
 - **Logo and Game Title:** Displays the title "Play Conkers" with a simple navigation link to "How to play".
+    
+    ![Header/Navigation](readme-images/header-nav.png)<br>
+    **Header/Navigation**
 
 ### Main Game Area
 - **Score Area:** Displays the scores for the player and the computer.
 - **Game Info:** Shows game messages and buttons to start a new round or quit the game.
 - **Game Area:** Contains the conker images for both player and computer and buttons for starting the game and attacking.
 
+    ![Score Area](readme-images/score-area.png)<br>
+    **Score Area**
+
+    ![Game Area](readme-images/game-area.png)<br>
+    **Game Area**
+
+    ![Game Info - winner round](readme-images/win-round.png)<br>
+    **Game Info - winner round**
+
+    ![Game Info - winner game](readme-images/conker-champion.png)<br>
+    **Game Info - winner game**
+
+    ![Game Info - quit game](readme-images/quit-game.png)<br>
+    **Game Info - quit game**
+
 ### How to Play Section
 - Detailed instructions on how to play the game, hidden by default but can be shown by clicking the "How to play" link.
+
+    ![How to play](readme-images/how-to-play.png)<br>
+    **How to play**
 
 ## JavaScript Functionality
 
@@ -67,7 +112,27 @@ I used a clean and simple color scheme to keep the focus on the game:
 ### Functionality Test (Manual Testing)
 Tested across different devices and browsers to ensure the game works correctly.
 
+## --> left to do
+#### difficulties
+I had a bit of struggle with the play game loop as i built it, it was playing out the game in one go. i had to rethink this and split it to use event handler for players turn and create new function for computers turn.
+
+
+#### bug fix
+attack button acts up.
+when computers looses attack button stays red when game starts,
+set attack color button to white in start game
+
+specificity hide show gameInfo. 
+  I had to move .hide and .show down in css due specificity the layer was still visible due to rearanging classes in css (moved game-info down to game-area).
+
+—>add show to element. was missing
+
+—> missing semicolons in two functions, found by jsHint. Bug is corrected
 Need test case about the "how to play" show/hide element
+
+
+
+
 
 #### Desktop Layout
 |Feature|Expected result|Action|Status|
@@ -189,8 +254,8 @@ To clone the repository:
 ## Technologies
 
 **Programs used:**
-- Vscode (html, css)
-- Photoshop (edit images and generating webp files)
+- Vscode (html, css and javascript)
+- Photoshop (edit images)
 - Figma (wireframe/prototyping)
 
 **Browsers:**
