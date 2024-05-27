@@ -159,7 +159,7 @@ function resetPlayerScore() {
 function checkWinScore(name) {
     let nameString = name.toLowerCase();
 
-    if (parseInt(document.getElementById(nameString).innerHTML) >= 2) {
+    if (parseInt(document.getElementById(nameString).innerHTML) >= 5) {
         document.getElementById("winner").innerHTML = `<h3>The new conker champion is ${name}!</h3>`;
         buttonVisibilityStates("gameInfo", false);
         buttonVisibilityStates("attackButton", true);
