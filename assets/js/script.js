@@ -144,14 +144,9 @@ function playTurn(attacker, defender) {
         conkerBroken = true;
 
         playerScore(attacker.name);
+        checkWinScore(attacker.name);
         
-        document.getElementById("winner").innerHTML = `<h3>${attacker.name}  wins! </h3>`;
-        
-        buttonVisibilityStates("gameInfo", false);
-        // buttonVisibilityStates("startGameInfo", true);
-        buttonVisibilityStates("newRoundButton", false);
-        buttonVisibilityStates("attackButton", true);
-        buttonVisibilityStates("quitButton", false);
+     
     } 
 
     conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
@@ -179,6 +174,28 @@ function playerScore(name) {
 
     name = name.toLowerCase();
     document.getElementById(name).innerHTML = parseInt(document.getElementById(name).innerHTML) + 1;
+}
+
+/**
+ * Check score for win game
+ */
+function checkWinScore(name) {
+    let nameString = name.toLowerCase();
+
+    if (parseInt(document.getElementById(nameString).innerHTML) >= 2) {
+        document.getElementById("winner").innerHTML = `<h3>The new conker champion is ${name}!</h3>`;
+        buttonVisibilityStates("gameInfo", false);
+        buttonVisibilityStates("attackButton", true);
+        buttonVisibilityStates("newRoundButton", true);
+        buttonVisibilityStates("quitButton", false);
+    } else {
+        document.getElementById("winner").innerHTML = `<h3>${name} wins this round! </h3>`;
+        buttonVisibilityStates("gameInfo", false);
+        buttonVisibilityStates("newRoundButton", false);
+        buttonVisibilityStates("attackButton", true);
+        buttonVisibilityStates("quitButton", false);
+
+    }
 }
 
 /**
