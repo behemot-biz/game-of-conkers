@@ -38,6 +38,7 @@ function buttonVisibilityStates(elementId, hide) {
         document.getElementById(elementId).classList.add("hide");
     } else {
         document.getElementById(elementId).classList.remove("hide");
+        document.getElementById(elementId).classList.add("show");
     }
 }
 
