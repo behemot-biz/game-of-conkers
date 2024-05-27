@@ -127,14 +127,14 @@ function playTurn(attacker, defender) {
  * Show the about element
  */
 function showAbout() {
-    buttonVisibilityStates("about", false)
+    buttonVisibilityStates("about", false);
 }
 
 /**
  * Hide the about element
  */
 function hideAbout() {
-    buttonVisibilityStates("about", true)
+    buttonVisibilityStates("about", true);
 }
 
 /**
