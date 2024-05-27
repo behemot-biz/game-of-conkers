@@ -191,4 +191,5 @@ function quitGame() {
     buttonVisibilityStates("attackButton", true);
     buttonVisibilityStates("newRoundButton", true);
     buttonVisibilityStates("quitButton", true);
+    buttonVisibilityStates("startNewGameButton", true);
 }
