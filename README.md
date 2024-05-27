@@ -69,8 +69,11 @@ As you can see in the image below some design elements has changed, but most is 
     ![Score Area](readme-images/score-area.png)<br>
     **Score Area**
 
-    ![Game Area](readme-images/game-area.png)<br>
-    **Game Area**
+    ![Game Area - start game](readme-images/game-area-start-game.png)<br>
+    **Game Area - start game**
+
+    ![Game Area - attack opponent](readme-images/game-area.png)<br>
+    **Game Area - attack opponent**
 
     ![Game Info - winner round](readme-images/win-round.png)<br>
     **Game Info - winner round**
