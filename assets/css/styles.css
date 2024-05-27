@@ -17,6 +17,10 @@ header {
     justify-content: space-between;
     align-items: baseline;
 }
+header a {
+    text-decoration: none;
+    color: #2B5C8F;
+}
 .nav a,  #about a {
     font-size: 0.7rem;
     font-weight: 500;
@@ -60,6 +64,8 @@ img {
     border-radius: 10px;
     text-transform: uppercase;
     padding: 10px;
+    margin:20px auto;
+    
 }
 .button:active {
     background-color: #494949;
