@@ -143,7 +143,7 @@ function playTurn(attacker, defender) {
         defender.durability = 0;
         conkerBroken = true;
 
-        playerScore(attacker.name);
+        updatePlayerScore(attacker.name);
         checkWinScore(attacker.name);
         
      
@@ -168,12 +168,21 @@ function hideAbout() {
 }
 
 /**
- * Keep track of total score, first to take 10 wins wins the full game 
+ * Keep track of score
  */
-function playerScore(name) {
+function updatePlayerScore(name) {
 
     name = name.toLowerCase();
     document.getElementById(name).innerHTML = parseInt(document.getElementById(name).innerHTML) + 1;
+}
+
+/**
+ * Reset score board
+ */
+function resetPlayerScore() {
+
+    document.getElementById("player").innerHTML = 0;
+    document.getElementById("computer").innerHTML = 0;
 }
 
 /**
@@ -187,6 +196,7 @@ function checkWinScore(name) {
         buttonVisibilityStates("gameInfo", false);
         buttonVisibilityStates("attackButton", true);
         buttonVisibilityStates("newRoundButton", true);
+        buttonVisibilityStates("startNewGameButton", false);
         buttonVisibilityStates("quitButton", false);
     } else {
         document.getElementById("winner").innerHTML = `<h3>${name} wins this round! </h3>`;
@@ -194,8 +204,15 @@ function checkWinScore(name) {
         buttonVisibilityStates("newRoundButton", false);
         buttonVisibilityStates("attackButton", true);
         buttonVisibilityStates("quitButton", false);
-
+        buttonVisibilityStates("startNewGameButton", true);
     }
+}
+/**
+ * Reset and start a new game
+ */
+function newGame() {
+    resetPlayerScore();
+    startGame();
 }
 
 /**
