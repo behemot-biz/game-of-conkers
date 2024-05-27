@@ -9,6 +9,9 @@ is a simple browser-based game where you play the traditional playground game of
 ### Project Purpose
 The aim of this project is to create an entertaining digital version of the classic conkers game. The game is designed to be easy to understand and play, providing a nostalgic experience for users familiar with the game and introducing it to new players.
 
+### Look and feel on different devices
+![Responsive image example](readme-images/amiresponsive.png)
+
 ## User Stories
 The Game of Conkers is designed to provide an engaging and fun experience for users who want to play a simple, turn-based game.
 
@@ -52,7 +55,7 @@ I used a clean and simple color scheme to keep the focus on the game:
 - **playTurn(attacker, defender):** Executes a turn, calculating damage and updating conker durability.
 - **updatePlayerScore(name):** Updates the score for the player or computer.
 - **checkWinScore(name):** Checks if the player or computer has won the game.
-- **newGame() and resetPlayerScore():** Resets score board anad starts new game.
+- **newGame() and resetPlayerScore(name):** Resets score board anad starts new game.
 - **showAbout() and hideAbout():** Toggles the visibility of the "How to play" section.
 
 ### Event Listeners
@@ -81,6 +84,74 @@ Need test case about the "how to play" show/hide element
 |Attack Button|Player attacks computer's conker|Click attack button|Pass|
 |Play Next Round Button|Sets up new round|Click play next round button|Pass|
 |Quit Game Button|Displays thanks for playing message|Click quit game button|Pass|
+
+The test cases were carried out on following devices/browsers: 
+
+MacBook Pro 15-inch, 2017
+- Safari Version 17.4.1 
+- Firefox 124.0.2 (64-bit)
+- Chrome Version 123.0.6312.124 (Official Build) (x86_64)
+
+Ipad pro (12,9 inch IOS 16.7.7)
+- Safari
+- Firefox
+- Chrome 
+
+Iphone SE
+- Safari
+- Chrome 
+
+Iphone 8 plus (IOS 16.7.7)
+- Safari
+
+The tests where carried out on the finalized site, no errors found.
+
+### Code validation
+#### Javascript
+Passed without errors
+
+<details>
+<summary>View html validation of home/start page (image of)</summary>
+
+![Home/start](readme-images/jshint.png)
+</details>
+
+
+#### HTML
+Passed without errors
+
+<details>
+<summary>View html validation of home/start page (image of)</summary>
+
+![Home/start](readme-images/html-validation-index.png)
+</details>
+
+#### CSS
+Passed without errors
+
+<details>
+<summary>View CSS validation (image of)</summary>
+
+![CSS](readme-images/css-validation.png)
+</details>
+
+### Performance test - Lighthouse
+
+#### Desktop
+
+<details>
+<summary>Result start/home page (image of)</summary>
+
+![Index page - desktop](readme-images/lighthouse-index-desktop.png)
+</details>
+
+#### Mobile
+
+<details>
+<summary>Result start/home page (image of)</summary>
+
+![Index page - desktop](readme-images/lighthouse-index-mobile.png)
+</details>
 
 ## Deployment
 
@@ -117,7 +188,6 @@ To clone the repository:
 
 ## Technologies
 
-
 **Programs used:**
 - Vscode (html, css)
 - Photoshop (edit images and generating webp files)
@@ -133,31 +203,61 @@ To clone the repository:
 - CSS 3
 - JavaScript
 
-**Web Tools:**
-- [GitHub](https://github.com) (repository)
-- [Google Fonts](https://fonts.google.com/) (font API for loading fonts)
-- [Markup Validation Service](https://validator.w3.org) (HTML code validation)
-- [CSS Validation Service](https://jigsaw.w3.org/css-validator/) (CSS code validation)
-
-
 **Web tools:**
-- [Github](https://behemot-biz.github.io/bokashi/) (repository)
-- [Favoicon](https://favicon.io/favicon-generator/#google_vignette) (generate favicon)
+- [GitHub](https://github.com) (repository)
+- [Favoicon](https://favicon.io/favicon-converter) (generate favicon)
 - [Google fonts](https://fonts.google.com/) (font api for loading fonts)
 - [Am i responsive](https://ui.dev/amiresponsive) (generate image on different devices)
 - [Markup validation Service](https://validator.w3.org) (html code validation)
-- [CSS validation service](https://jigsaw.w3.org/css-validator/) (css code validation)
-- [JsHint](https://jshint.com/) (javascript code validation)
+- [CSS validation service](https://jigsaw.w3.org/css-validator) (css code validation)
+- [JSFiddle - Code Playground](https://jsfiddle.net) (advice from mentor)
+- [JSHint](https://jshint.com) (javascript code validation)
 - [Dillinger](https://dillinger.io) (Readme editor)
+
+## Ideas for future implementation
+- Multi-player
+- Configuration options for each round like bake in oven, soak in viniger etc.
+- Feature for one-ers, two-ers and a more realistic score count to better mimic the game.
+- Leader board.
+
+The list can be made as long as the tradition of the game. 
 
 ## Credits
 
-### Code
+### Code inspiration
 
+[What is setTimeout in JavaScript and how to work with it?](https://codedamn.com/news/javascript/what-is-settimeout-in-javascript)<br>
+How to set time out and then call computers turn.
+- playerTurn()
 
-### Tutorials Used
+[How to transform string to lowercase letters.](https://www.w3schools.com/jsref/jsref_tolowercase.asp) <br>
+ Needed to transform name of player/computer to update score (id lowercase, name contains uppercase letter) 
+- updatePlayerScore(name)
+- checkWinScore(name)
+- resetPlayerScore(name)
 
+Header (logo/nav) is very loosley based on the CI project "Love Running"
 
-**Special thanks to my friends and family for testing the game and providing feedback.**
+[Correct use of event listener and show/hide elements](https://jsfiddle.net/rcoyaubq/)<br>
+I receved support from my mentor Rohit Sharma on how to better handle show/hide elements.
+-  buttonVisibilityStates(elementId, hide)
 
-Enjoy playing the Game of Conkers!
+How to properly set up the event listeners
+- DOMContentLoaded
+- Button Click Events
+
+**Readme guidance**
+
+[README.md - How, What and When?](https://www.youtube.com/watch?v=l1DE7L-4eKQ) 
+
+[Kera Cudmore's readme examples](https://github.com/kera-cudmore/readme-examples) <br>
+I copied the deployment section from this example.
+
+**Thanks to my friends and family for testing the game and providing feedback.**
+
+**Special thanks**
+Special thanks to my husband Jimi for patience and support with the copywriting and proofreading of all texts both site and readme.<br>
+Fellow students in the Swedish channel<br>
+And a very Special thank you goes to Mentor Rohit Sharma for excellent support!
+
+**Enjoy playing the Game of Conkers!**
