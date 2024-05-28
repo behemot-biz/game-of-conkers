@@ -55,7 +55,7 @@ function conkerResize(elementId, conkerSize) {
 function startGame() {
     attacker = 0;  // player 0, computer 1
     conkerBroken = false;
-    document.getElementById("attackButton").style.backgroundColor = "#ffffff";
+    document.getElementById("attackButton").disabled = false;
     conkers = prepareGame();
 
     buttonVisibilityStates("gameInfo", true);
@@ -75,7 +75,7 @@ function playerTurn() {
     if (conkerBroken != true && attacker === 0) {
         playTurn(conkers[0], conkers[1]);
         attacker = 1; // next turn computer
-        document.getElementById("attackButton").style.backgroundColor = "#f3c7c7";
+        document.getElementById("attackButton").disabled = true;
         setTimeout(computerTurn, 1000); // wait 1 seconds and then call computers turn.
     }
 }
@@ -99,7 +99,7 @@ function computerTurn() {
     if (conkerBroken != true && attacker === 1){
         playTurn(conkers[1], conkers[0]);
         attacker = 0; // next turn player
-        document.getElementById("attackButton").style.backgroundColor = "#ffffff";
+        document.getElementById("attackButton").disabled = false;
     }
 }
 

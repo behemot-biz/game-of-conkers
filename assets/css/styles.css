@@ -71,6 +71,11 @@ img {
     color: #ffffff;
     border: #ffffff 1px solid;
 }
+.button:disabled {
+    background-color: #f3c7c7;
+    color: #494949;
+    border: #f75e5e 1px solid;
+}
 .dark {
     background-color: #2B5C8F;
     color: #ffffff;
