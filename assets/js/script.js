@@ -88,11 +88,6 @@ function initializeTurn() {
 }
 
 /**
- * Add event listener 
- */
-addEventListener("DOMContentLoaded", initializeTurn);
-
-/**
  * Computer's turn
  */
 function computerTurn() {
@@ -194,3 +189,8 @@ function quitGame() {
     buttonVisibilityStates("quitButton", true);
     buttonVisibilityStates("startNewGameButton", true);
 }
+
+/**
+ * Add event listener 
+ */
+addEventListener("DOMContentLoaded", initializeTurn);
