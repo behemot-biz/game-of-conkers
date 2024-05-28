@@ -62,8 +62,6 @@ function startGame() {
     buttonVisibilityStates("startButton", true);
     buttonVisibilityStates("attackButton", false);
 
-    document.getElementById("winner").innerHTML = "";
-
     conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
     conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
 }
@@ -149,20 +147,29 @@ function resetPlayerScore() {
 }
 
 /**
+ * Set game info text
+ */
+function changeWinnerHeading(headingText) {
+    let element = document.getElementById("winner-heading");
+    buttonVisibilityStates("winner-heading", false);
+    element.innerText = headingText;
+}
+
+/**
  * Check score for win game
  */
 function checkWinScore(name) {
     let nameString = name.toLowerCase();
 
     if (parseInt(document.getElementById(nameString).innerHTML) >= 5) {
-        document.getElementById("winner").innerHTML = `<h3>The new conker champion is ${name}!</h3>`;
+        changeWinnerHeading("The new conker champion is " + name + "!");
         buttonVisibilityStates("gameInfo", false);
         buttonVisibilityStates("attackButton", true);
         buttonVisibilityStates("newRoundButton", true);
         buttonVisibilityStates("startNewGameButton", false);
         buttonVisibilityStates("quitButton", false);
     } else {
-        document.getElementById("winner").innerHTML = `<h3>${name} wins this round! </h3>`;
+        changeWinnerHeading(name + " wins this round!");
         buttonVisibilityStates("gameInfo", false);
         buttonVisibilityStates("newRoundButton", false);
         buttonVisibilityStates("attackButton", true);
@@ -183,7 +190,7 @@ function newGame() {
  * Quit game
  */
 function quitGame() {
-    document.getElementById("winner").innerHTML = `<h3>Thanks for playing! Come back soon!</h3>`;
+    changeWinnerHeading("Thanks for playing! Come back soon!");
     buttonVisibilityStates("attackButton", true);
     buttonVisibilityStates("newRoundButton", true);
     buttonVisibilityStates("quitButton", true);
