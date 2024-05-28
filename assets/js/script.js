@@ -45,7 +45,7 @@ function buttonVisibilityStates(elementId, hide) {
 /**
  * Update conkers size during the game
  */
-function conkerResize(elementId, conkerSize) {
+function resizeConker(elementId, conkerSize) {
     document.getElementById(elementId).style.width = conkerSize;
 }
 
@@ -62,8 +62,8 @@ function startGame() {
     buttonVisibilityStates("startButton", true);
     buttonVisibilityStates("attackButton", false);
 
-    conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
-    conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
+    resizeConker("playerConkerImg", conkers[0].durability * 2 + "px");
+    resizeConker("computerConkerImg", conkers[1].durability * 2 + "px");
 }
 
 /**
@@ -112,8 +112,8 @@ function playTurn(attacker, defender) {
         checkWinScore(attacker.name);
     } 
 
-    conkerResize("playerConkerImg", conkers[0].durability * 2 + "px");
-    conkerResize("computerConkerImg", conkers[1].durability * 2 + "px");
+    resizeConker("playerConkerImg", conkers[0].durability * 2 + "px");
+    resizeConker("computerConkerImg", conkers[1].durability * 2 + "px");
 }
 
 /**
