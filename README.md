@@ -87,6 +87,12 @@ I chose to use Figma for wireframe and prototyping. In early stage of my thought
     ![Game Info - quit game](readme-images/quit-game.png)<br>
     **Game Info - quit game**
 
+    **A note about playing on small devises**
+
+    When playing the game on a small device, the conkers shrink as the game progresses, resulting in a growing gap between the player's conker and the attack button. This design trade-off is intentional; although it may not be visually appealing, it ensures that the player does not have to adjust their grip, as the button's location remains fixed.
+
+    ![Game Area - mid game on small device](readme-images/game-play-galaxy-fold.png)<br>
+
 ### How to Play Section
 - Detailed instructions on how to play the game, hidden by default but can be shown by clicking the "How to play" link.
 
@@ -100,11 +106,12 @@ I chose to use Figma for wireframe and prototyping. In early stage of my thought
 - **createConker(name):** Creates a conker object with random strength and durability.
 - **prepareGame():** Prepares the game by assigning conkers to the player and the computer.
 - **buttonVisibilityStates(elementId, hide):** Toggles the visibility of HTML elements.
-- **conkerResize(elementId, conkerSize):** Resizes the conker images based on durability.
+- **resizeConker(elementId, conkerSize):** Resizes the conker images based on durability.
 - **startGame():** Initializes the game, setting up the conkers and UI elements.
 - **playerTurn() and computerTurn():** Handles the player's and computer's turns respectively.
 - **playTurn(attacker, defender):** Executes a turn, calculating damage and updating conker durability.
 - **updatePlayerScore(name):** Updates the score for the player or computer.
+- **changeWinnerHeading(headingText):** Handels the game info text.
 - **checkWinScore(name):** Checks if the player or computer has won the game.
 - **newGame() and resetPlayerScore(name):** Resets score board anad starts new game.
 - **showAbout() and hideAbout():** Toggles the visibility of the "How to play" section.
@@ -123,6 +130,7 @@ Tested across different devices and browsers to ensure the game works correctly.
 | --- | --- | --- | --- | 
 |Start Game Button|Starts a new game|Click start game button|Pass|
 |Attack Button|Player attacks computer's conker|Click attack button|Pass|
+|Attack Button|Computer attacks players's conker|Attack button disabled|Pass|
 |Play Next Round Button|Sets up new round|Click play next round button|Pass|
 |Quit Game Button|Displays thanks for playing message|Click quit game button|Pass|
 
@@ -131,6 +139,7 @@ Tested across different devices and browsers to ensure the game works correctly.
 | --- | --- | --- | --- | 
 |Start Game Button|Starts a new game|Click start game button|Pass|
 |Attack Button|Player attacks computer's conker|Click attack button|Pass|
+|Attack Button|Computer attacks players's conker|Attack button disabled|Pass|
 |Play Next Round Button|Sets up new round|Click play next round button|Pass|
 |Quit Game Button|Displays thanks for playing message|Click quit game button|Pass|
 
