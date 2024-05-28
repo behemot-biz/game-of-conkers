@@ -132,6 +132,7 @@ Tested across different devices and browsers to ensure the game works correctly.
 |Attack Button|Player attacks computer's conker|Click attack button|Pass|
 |Attack Button|Computer attacks players's conker|Attack button disabled|Pass|
 |Play Next Round Button|Sets up new round|Click play next round button|Pass|
+|Start New Game Button|Starts a new game and resets score|Click start new game button|Pass|
 |Quit Game Button|Displays thanks for playing message|Click quit game button|Pass|
 
 #### Mobile Layout
@@ -141,6 +142,7 @@ Tested across different devices and browsers to ensure the game works correctly.
 |Attack Button|Player attacks computer's conker|Click attack button|Pass|
 |Attack Button|Computer attacks players's conker|Attack button disabled|Pass|
 |Play Next Round Button|Sets up new round|Click play next round button|Pass|
+|Start New Game Button|Starts a new game and resets score|Click start new game button|Pass|
 |Quit Game Button|Displays thanks for playing message|Click quit game button|Pass|
 
 The test cases were carried out on following devices/browsers: 
